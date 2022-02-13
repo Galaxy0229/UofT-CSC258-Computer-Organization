@@ -1,0 +1,47 @@
+1a. 000000 10000 00100 00010 XXXXX 100000  
+1b. 000000 XXXXX 01001 01000 01111 000011  
+1c. 000010 000000 0000 0000 1111 1100 0000  
+1d. 000000 11111 XXXXX XXXXX XXXXX 001000  
+2a. add $s0, $s1, 0x00ff  
+2b. sh $ra, 0xffff, $ra  
+2c. all $zero, $zero, 0  
+3a. PCWrite 0
+    PCWriteCond 0
+    IorD X
+    MemRead 0
+    MemWrite 0
+    MemToReg 0
+    IRWrite 0
+    PCSource X
+    ALUOp "add"
+    ALUSrcA 1
+    ALUSrcB 1
+    RegWrite 1
+    RegDst 0
+3b. PCWrite 1
+    PCWriteCond 0
+    IorD X
+    MemRead 0
+    MemWrite 0
+    MemToReg 0
+    IRWrite 0
+    PCSource X
+    ALUOp "add"
+    ALUSrcA 1
+    ALUSrcB 4
+    RegWrite 1
+    RegDst 0
+3c. PCWrite 1
+    PCWriteCond 0
+    IorD 0
+    MemRead 0
+    MemWrite 0
+    MemToReg 0
+    IRWrite 0
+    PCSource 0
+    ALUOp "add"
+    ALUSrcA 0
+    ALUSrcB 4
+    RegWrite 1
+    RegDst 0
+
